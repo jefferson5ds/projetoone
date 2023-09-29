@@ -1,7 +1,106 @@
-main{
-    background-color: aqua;
+body{
+    background-color: black;
+    overflow: hidden; /* o que tiver transbordando fora do body esse seletor vai esconder   */
+
+}
+main::after {  /*   adicionar  elementos  extra no html atarves do css, no documento main depois     */
+   content: " ";   
+   position: fixed; 
+   top: 0;
+   left: 0;
+   min-height: 100vh;
+   width: 80vw;
+   background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+   
+   
+}
+    
+
+main .personagem {
+    display: none;  /* essa propriedade serve para esconder os elementos */
+    height: 100vh;   /* elemento completa toda a tela do dispositivo*/
+       
 }
 
-body{
-    font: ;
+main  .personagem.selecionado {
+    display: block; 
+}
+
+main .personagem .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* serve para compactar todos os elementos juntos */
+}
+
+.conteudo {
+    
+    position: absolute;
+    top: 0; 
+    left: 120px; /* espasamento a direito no paragrafo */
+    display: flex; /*        */
+    flex-direction: column;        /*flex-direction:    direção dos elementos   (row em linha)  (coluna*/
+    justify-content: center; /* centralizar verticalmente */
+    min-height: 100vh; /* */
+    max-width: 380px;
+    z-index: 1; /*eixo de profundide  */
+
+}
+
+.conteudo .nome-personagem{
+    
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "secular one";
+    font-weight: 400;
+    margin-bottom: 20px;
+
+}
+.conteudo .descricao{
+    color:#ffffff;
+    font-family: "rubik";
+    font-size: 16px;
+    line-height: 24px;  /*altura entre as linhas */
+   
+
+}
+
+.conteudo .logo{
+    background-image: url('../imagens/one-piece-logo.png');
+    height: 100px;
+    width: 230px;
+    background-size: cover; /* o elemento ira comprir a area especifica de altura e largura */
+    margin-bottom: 35px;
+ }
+
+ .botoes{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    width: 180px;
+    justify-content: center; 
+    align-items: center;
+    gap: 10px; 
+    background-color: rgba(0,0,0, 0.3);
+
+ }
+.botoes .botao{
+    border: none;
+    background: none;
+    cursor:  pointer;
+    border-radius: 50%;
+
+}
+ 
+.botoes .botao img{
+    border-radius: 50%;
+
+}
+.botoes .botao.selecionado{
+    transform: scale(1.2); /*  aumento o elemento especifico da classe*/
+    box-shadow: 0 0 10px white;         /*  sombra do elemento*/
+
+
 }
