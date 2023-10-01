@@ -67,7 +67,7 @@ main .personagem .imagem {
 .conteudo .logo{
     background-image: url('../imagens/one-piece-logo.png');
     height: 100px;
-    width: 230px;
+    width: 200px;
     background-size: cover; /* o elemento ira comprir a area especifica de altura e largura */
     margin-bottom: 35px;
  }
